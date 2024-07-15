@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body{
+  background-color: black;
+  margin:0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar{
+  width:0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2,h3{
+  margin:0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.links{
+  color:white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.header_main{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding:0px 15px;
+  width: '100vw';
+}
+.header_main div{
+  display: flex;
+  align-items: center;
+}
+.header_main div ul{
+  list-style: none;
+  font-family: 'poppins';
+  display: flex;
+  align-items: center;
+  gap:25px
 }
 
-.App-link {
-  color: #61dafb;
-}
+.slider_box::-webkit-scrollbar{
+  width:0px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.slider_box div:hover{
+  transform:scale(1.01)
+}
+.review_container::-webkit-scrollbar{
+  width:0px;
+
+}
+.filter_container::-webkit-scrollbar{
+width: 0px;
+}
+.overview_container::-webkit-scrollbar{
+  width:0px;
+}
+.expore_container::-webkit-scrollbar{
+  width:0px;
+}
+.explore_card:hover{
+  transform: scale(1.01);
+}
+.player_container::-webkit-scrollbar{
+  width:0px;
 }

@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { getHindi } from './API/ApiHandler';
+import { useContext, useEffect, useState } from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
+import PopularSlider from './components/PopularSlider';
+import { useDispatch, useSelector } from 'react-redux';
+import { getHindiMovies,getKannadaMovies,getTamilMovies,getTelaguMovies } from './Redux/ThunkCalls/MovieThunk';
+import { setHomeItem } from './Redux/MovieSlice';
+import categoryContext from './utils/categoryContext';
+import { Route, Routes } from 'react-router-dom';
+import MovieDetail from './Pages/MovieDetail';
+import Explore from './Pages/Explore';
 
 function App() {
+  const dispatch=useDispatch();
+ 
+  const [category,setCategory]=useState('movie');
+useEffect(()=>{
+
+  dispatch(getHindiMovies(category));
+  dispatch(getKannadaMovies(category));
+  dispatch(getTelaguMovies(category));
+  dispatch(getTamilMovies(category));
+},[category])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <categoryContext.Provider value={{category,setCategory}}>
+      <div className="App mt-12" style={{}}>
+        <Header/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/details/:id/:language' element={<MovieDetail/>}/>
+        <Route path='/explore/:language' element={<Explore/>}/>
+
+      </Routes>
+      </div>
+    {/* <div className="App" style={{height:'100vh',width:'100%',position:'relative'}}> */}
+      
+    </categoryContext.Provider>
   );
 }
 
