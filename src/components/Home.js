@@ -3,11 +3,13 @@ import { ImgBaseUrl, ImgBaseUrlqty } from '../API/Client';
 import Loader from './Loader';
 import PopularSlider from './PopularSlider';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Home(props) {
 	const { hindiMovies, telaguMovies, kannadaMovies, tamilMovies } = useSelector(
 		(state) => state.MovieSlice
 	);
+	const navigate=useNavigate();
 	let currentMovie = hindiMovies.length > 0 ? hindiMovies[0] : '';
 	const divStyle = {
 		width: '100vw',
@@ -36,19 +38,24 @@ function Home(props) {
 									</p>
 									<div className="mt-10 flex gap-x-6 mb-4">
 										<a
-											href="#"
-											className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-										>
-											<i className="fas fa-play color-black mr-3 "></i>
-											Play
+											
+											className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
+											onClick={() => {
+												navigate(
+													`/details/${currentMovie.id}/${currentMovie.original_language}`
+												);
+											}}
+										
+											><i className="fas fa-info color-black mr-3 "></i>
+											More Info
 										</a>
-										<a
+										{/* <a
 											href="#"
 											className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 										>
 											<i className="fas fa-plus mr-2"></i>
 											My List
-										</a>
+										</a> */}
 									</div>
 									{/* <SmallCard  title={'Popular on Netflix'} data={hindiMovies} width='100px'/>  */}
 								</div>
