@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getHindi, getTelagu, getKannada, getTamil } from "../../API/ApiHandler";
+import {  getMovies } from "../../API/ApiHandler";
 
 const getHindiMovies=createAsyncThunk('popular',async (category)=>{
-    const response=await getHindi(category);
+    const response=await getMovies(1,'hi');
     try {
         return response.data.results;
     } catch (error) {
@@ -11,7 +11,7 @@ const getHindiMovies=createAsyncThunk('popular',async (category)=>{
 
 });
 const getKannadaMovies=createAsyncThunk('upcoming',async (category)=>{
-    const response=await getKannada(category);
+    const response = await getMovies(1, 'kn');
     try {
         return response.data.results;
     } catch (error) {
@@ -21,7 +21,7 @@ const getKannadaMovies=createAsyncThunk('upcoming',async (category)=>{
 })
 
 const getTelaguMovies=createAsyncThunk('toprated',async (category)=>{
-    const response=await getTelagu(category);
+    const response = await getMovies(1, 'te');
     try {
         return response.data.results;
     } catch (error) {
@@ -30,7 +30,7 @@ const getTelaguMovies=createAsyncThunk('toprated',async (category)=>{
 
 })
 const getTamilMovies=createAsyncThunk('tamil',async (category)=>{
-    const response=await getTamil(category);
+    const response = await getMovies(1, 'ta');
     try {
         return response.data.results;
     } catch (error) {
