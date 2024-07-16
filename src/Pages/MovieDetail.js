@@ -72,10 +72,10 @@ function MovieDetail() {
 							style={{ flex: '1 1 600px', overflow: 'scroll' }}
 						>
 							<div className="flex justify-between item-center">
-								<h1 className="text-6xl font-bold tracking-tight text-white md:text-6xl sm:text-10xl mr-4">
+								<h1 className="text-3xl font-bold tracking-tight text-white md:text-6xl sm:text-4xl mr-4">
 									{detail.title}
 								</h1>
-								<h3 className="flex text-2xl font-bold tracking-tight text-white md:text-4xl sm:text-4xl">
+								<h3 className="flex text-2xl font-bold tracking-tight text-white md:text-4xl sm:text-3xl">
 									{Math.floor(detail.vote_average)}
 									<i
 										className="fas fa-star ml-2"

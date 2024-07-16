@@ -61,3 +61,8 @@ width: 0px;
 .player_container::-webkit-scrollbar{
   width:0px;
 }
+@media screen and (max-width: 480px) {
+  .banner_container {
+    height: 50%;
+  }
+}

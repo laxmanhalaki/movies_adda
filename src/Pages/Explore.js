@@ -69,10 +69,10 @@ const navigate=useNavigate();
 			style={{ height: '90vh' }}
 		
 		>
-			<h3 className="text-grey font-bold text-2xl py-4">More to Explore</h3>
+			<h3 className="text-grey font-bold text-1xl sm:text-2xl py-4">More to Explore</h3>
 			<div
 				className="grid lg:grid-cols-8 md:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-4 py-5 expore_container"
-				style={{ overflow: 'scroll', height: '100%' }}
+				style={{ overflow: 'scroll', height: '92%' }}
 				onScroll={handleScroll}
 			>
 				{items.map((item) => {

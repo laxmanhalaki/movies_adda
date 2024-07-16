@@ -23,10 +23,16 @@ function Home(props) {
 		<>
 			{currentMovie ? (
 				<>
-					<div style={{ height: '90vh', width: '100%', position: 'relative' }}>
-						<div style={{ ...divStyle, justifyContent: 'flex-start' }}>
+					<div
+						className="h-1/2  md:h-2/3 lg:h-1/1"
+						style={{ width: '100%', position: 'relative' }}
+					>
+						<div
+							className="banner_container"
+							style={{ ...divStyle, justifyContent: 'flex-start' }}
+						>
 							<div
-								className="px-8 max-w-2xl py-40 sm:py-20 lg:py-30 mt-10 "
+								className="mt-4 px-8 max-w-2xl py-10 sm:py-20 lg:py-30 lg:mt-10  md:mt-6 "
 								style={{ width: '100%' }}
 							>
 								<div>
@@ -38,15 +44,14 @@ function Home(props) {
 									</p>
 									<div className="mt-10 flex gap-x-6 mb-4">
 										<a
-											
 											className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
 											onClick={() => {
 												navigate(
 													`/details/${currentMovie.id}/${currentMovie.original_language}`
 												);
 											}}
-										
-											><i className="fas fa-info color-black mr-3 "></i>
+										>
+											<i className="fas fa-info color-black mr-3 "></i>
 											More Info
 										</a>
 										{/* <a

@@ -28,7 +28,7 @@ useEffect(()=>{
 
   return (
     <categoryContext.Provider value={{category,setCategory}}>
-      <div className="App mt-12" style={{}}>
+      <div className="App mt-12" style={{flex:1}}>
         <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>

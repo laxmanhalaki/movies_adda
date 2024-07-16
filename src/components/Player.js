@@ -11,13 +11,12 @@ function Player({videos,setPlayer}) {
 				position: 'fixed',
 				width: '100vw',
 				height: '100vh',
-				backgroundColor: 'rgba(0,0,0,0.2)',
+				backgroundColor: 'rgba(0,0,0,0.6)',
 				zIndex: 20,
 				top: '0px',
 				bottom: '0px',
-		
 			}}
-			className='p-5 md:p-15'
+			className="p-5 md:p-15 "
 		>
 			<p
 				className="text-white cursor-pointer"
@@ -32,15 +31,14 @@ function Player({videos,setPlayer}) {
 				<i className="fas fa-xmark"></i>
 			</p>
 			<div
-				className="px-6 player_container"
+				className="px-6 player_container h-1/2 sm:h-1/2 md:h-2/3 lg:h-1/1"
 				style={{
-					width: '100%',
-					height: '90%',
+					width: 'auto',
 					backgroundColor: 'black',
 					overflow: 'scroll',
-					display:'flex',
-					alignItems:'center',
-					justifyContent:'center'
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
 				}}
 			>
 				{videos[0] ? (
