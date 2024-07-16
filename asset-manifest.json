@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/netflix_clone/static/css/main.2ac4233e.css",
-    "main.js": "/netflix_clone/static/js/main.9c72e239.js",
-    "static/js/453.f0cb673c.chunk.js": "/netflix_clone/static/js/453.f0cb673c.chunk.js",
-    "static/media/logo.png": "/netflix_clone/static/media/logo.f2a7cd7d5937ee50bcf8.png",
-    "static/media/loader.png": "/netflix_clone/static/media/loader.0c80dc5d4126beb50775.png",
-    "index.html": "/netflix_clone/index.html",
-    "main.2ac4233e.css.map": "/netflix_clone/static/css/main.2ac4233e.css.map",
-    "main.9c72e239.js.map": "/netflix_clone/static/js/main.9c72e239.js.map",
-    "453.f0cb673c.chunk.js.map": "/netflix_clone/static/js/453.f0cb673c.chunk.js.map"
+    "main.css": "/movies_adda/static/css/main.2ac4233e.css",
+    "main.js": "/movies_adda/static/js/main.d2dd7b50.js",
+    "static/js/453.f0cb673c.chunk.js": "/movies_adda/static/js/453.f0cb673c.chunk.js",
+    "static/media/logo.png": "/movies_adda/static/media/logo.a4a2571752cddf6545eb.png",
+    "static/media/loader.png": "/movies_adda/static/media/loader.2aaf2331a3e63321747f.png",
+    "index.html": "/movies_adda/index.html",
+    "main.2ac4233e.css.map": "/movies_adda/static/css/main.2ac4233e.css.map",
+    "main.d2dd7b50.js.map": "/movies_adda/static/js/main.d2dd7b50.js.map",
+    "453.f0cb673c.chunk.js.map": "/movies_adda/static/js/453.f0cb673c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ac4233e.css",
-    "static/js/main.9c72e239.js"
+    "static/js/main.d2dd7b50.js"
   ]
 }
