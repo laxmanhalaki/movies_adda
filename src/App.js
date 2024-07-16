@@ -12,6 +12,7 @@ import categoryContext from './utils/categoryContext';
 import { Route, Routes } from 'react-router-dom';
 import MovieDetail from './Pages/MovieDetail';
 import Explore from './Pages/Explore';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch=useDispatch();
@@ -35,6 +36,7 @@ useEffect(()=>{
         <Route path='/explore/:language' element={<Explore/>}/>
 
       </Routes>
+      <Footer />
       </div>
     {/* <div className="App" style={{height:'100vh',width:'100%',position:'relative'}}> */}
       

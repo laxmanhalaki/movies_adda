@@ -2,7 +2,7 @@
 	"name": "netflix_clone",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://laxmanhalaki.github.io/netflix_clone",
+	"homepage": "https://laxmanhalaki.github.io/movies_adda",
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.2.6",
 		"@testing-library/jest-dom": "^5.17.0",

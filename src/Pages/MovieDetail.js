@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Loader from '../components/Loader';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { getMovie } from '../API/ApiHandler';
 import { useSelector } from 'react-redux';
 import { ImgBaseUrl } from '../API/Client';
@@ -9,12 +9,16 @@ import Player from '../components/Player';
 
 function MovieDetail() {
 	const [detail, setDetail] = useState();
+	const { pathname } = useLocation();
 	const { id, language } = useParams();
 	const [player,setPlayer]=useState(false);
 	const { kannadaMovies, hindiMovies, telaguMovies } = useSelector(
 		(state) => state.MovieSlice
 	);
 	let relatedMovies = [];
+	 useEffect(() => {
+			window.scrollTo(0, 0);
+		}, [pathname]);
 
 	useEffect(() => {
 		getMovieDetail(id, language);

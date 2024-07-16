@@ -59,10 +59,10 @@ function Home(props) {
 							style={{ width: '100%', height: '100%', objectFit: 'cover' }}
 						/>
 					</div>
-					<PopularSlider title={'Popular in Kannada'} data={kannadaMovies} />
-					<PopularSlider title={'Popular in Hindi'} data={hindiMovies} />
-					<PopularSlider title={'Popular in Telagu'} data={telaguMovies} />
-					<PopularSlider title={'Popular in Tamil'} data={tamilMovies} />
+					<PopularSlider title={'Kannada Movies'} data={kannadaMovies} />
+					<PopularSlider title={'Hindi Movies'} data={hindiMovies} />
+					<PopularSlider title={'Telagu Movies'} data={telaguMovies} />
+					<PopularSlider title={'Tamil Movies'} data={tamilMovies} />
 				</>
 			) : (
 				<Loader />

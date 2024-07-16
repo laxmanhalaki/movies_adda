@@ -2,12 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import { ImgBaseUrl } from '../API/Client'
 import { useSelector } from 'react-redux'
 import { getMovies } from '../API/ApiHandler';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import no_image from '../assets/no_image.svg.png';
 
 function Explore() {
     const {kannadaMovies}=useSelector(state=>state.MovieSlice);
-    const {language}=useParams()
+    const {language}=useParams();
+		const { pathname } = useLocation();
     const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -37,6 +38,9 @@ const navigate=useNavigate();
   //   }
   //   fetchData();
   // };
+	 useEffect(() => {
+			window.scrollTo(0, 0);
+		}, [pathname]);
   useEffect(() => {
     setItems([])
     fetchData();
