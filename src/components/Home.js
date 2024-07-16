@@ -14,8 +14,9 @@ function Home(props) {
 	const divStyle = {
 		width: '100vw',
 		height: '100%',
-		position: 'absolute',
-		background: 'linear-gradient(to left top,transparent,black 80%)',
+		// position: 'absolute',
+		backgroundImage:`url(${ImgBaseUrlqty + currentMovie.backdrop_path})`,
+		// background: 'linear-gradient(to left top,transparent,black 80%)',
 		aligncurrentMovies: 'center',
 		display: 'flex',
 	};
@@ -24,7 +25,7 @@ function Home(props) {
 			{currentMovie ? (
 				<>
 					<div
-						className="h-1/2  md:h-2/3 lg:h-1/1"
+						className="h-1/1 sm:h-1/2 md:h-2/3 lg:h-2/3"
 						style={{ width: '100%', position: 'relative' }}
 					>
 						<div
@@ -32,14 +33,14 @@ function Home(props) {
 							style={{ ...divStyle, justifyContent: 'flex-start' }}
 						>
 							<div
-								className="mt-4 px-8 max-w-2xl py-10 sm:py-20 lg:py-30 lg:mt-10  md:mt-6 "
+								className="mt-4 px-8 max-w-2xl py-6 sm:py-20 lg:py-30 lg:mt-10  md:mt-6 "
 								style={{ width: '100%' }}
 							>
-								<div>
-									<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+								<div style={{}}>
+									<h1 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
 										{currentMovie.original_title}
 									</h1>
-									<p className="mt-6 text-lg leading-8 text-white">
+									<p className="mt-6 text-lg leading-8 text-white text-1xl sm:text-2xl">
 										{currentMovie.overview}
 									</p>
 									<div className="mt-10 flex gap-x-6 mb-4">
@@ -66,10 +67,12 @@ function Home(props) {
 								</div>
 							</div>
 						</div>
-						<img
-							src={ImgBaseUrlqty + currentMovie.backdrop_path}
-							style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-						/>
+				
+							{/* <img
+								src={ImgBaseUrlqty + currentMovie.backdrop_path}
+								style={{ width: '100%', objectFit: 'cover' }}
+							/> */}
+			
 					</div>
 					<PopularSlider title={'Kannada Movies'} data={kannadaMovies} />
 					<PopularSlider title={'Hindi Movies'} data={hindiMovies} />

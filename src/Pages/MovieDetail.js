@@ -62,13 +62,14 @@ function MovieDetail() {
 								style={{
 									maxWidth: '500px',
 									maxHeight: '90vh',
+									width: '100%',
 									maskImage:
 										'linear-gradient(to right bottom,transparent,black 80%)',
 								}}
 							/>
 						</div>
 						<div
-							className="p-8 review_container"
+							className="p-4 md:p-8 review_container"
 							style={{ flex: '1 1 600px', overflow: 'scroll' }}
 						>
 							<div className="flex justify-between item-center">
@@ -84,7 +85,7 @@ function MovieDetail() {
 								</h3>
 							</div>
 
-							<p className="text-grey py-2">
+							<p className="text-grey py-2 ">
 								{detail.release_date} |{' '}
 								{`${Math.floor(detail.runtime / 60)} h ${
 									detail.runtime % 60
@@ -93,7 +94,7 @@ function MovieDetail() {
 							</p>
 							<div className="overvie_section py-4 text-lg">
 								<h3 className="text-white font-bold py-2">OVERVIEW</h3>
-								<p className="text-white " style={{ width: '100%' }}>
+								<p className="text-white text-[14px] md:text-1xl " style={{ width: '100%' }}>
 									{detail.overview}
 								</p>
 								<div className="specification_container py-4">
@@ -136,7 +137,13 @@ function MovieDetail() {
 					</div>
 					{player ? (
 						<Player
-							videos={detail.videos ? detail.videos.results.filter(item=>item.type=='Trailer') : ''}
+							videos={
+								detail.videos
+									? detail.videos.results.filter(
+											(item) => item.type == 'Trailer'
+									  )
+									: ''
+							}
 							setPlayer={setPlayer}
 						/>
 					) : null}

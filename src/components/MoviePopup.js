@@ -56,8 +56,8 @@ function MoviePopup({ setEnableSearch }) {
 				zIndex: 20,
 				top: '0px',
 				bottom: '0px',
-				padding: '60px',
 			}}
+			className='p-4 md:p-10'
 		>
 			<div
 				className="px-6 filter_container"

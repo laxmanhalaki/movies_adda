@@ -18,18 +18,6 @@ function Player({videos,setPlayer}) {
 			}}
 			className="p-5 md:p-15 "
 		>
-			<p
-				className="text-white cursor-pointer"
-				style={{
-					right: '60px',
-					fontSize: '30px',
-					position: 'absolute',
-					top: '20px',
-				}}
-				onClick={() => setPlayer(false)}
-			>
-				<i className="fas fa-xmark"></i>
-			</p>
 			<div
 				className="px-6 player_container h-1/2 sm:h-1/2 md:h-2/3 lg:h-1/1"
 				style={{
@@ -39,8 +27,20 @@ function Player({videos,setPlayer}) {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
+					position: 'relative',
 				}}
 			>
+				<p
+					className="text-white cursor-pointer text-2xl md:text-4xl"
+					style={{
+						right: '0px',
+						position: 'absolute',
+						top: '0px',
+					}}
+					onClick={() => setPlayer(false)}
+				>
+					<i className="fas fa-xmark"></i>
+				</p>
 				{videos[0] ? (
 					<iframe
 						width="100%"
@@ -50,7 +50,8 @@ function Player({videos,setPlayer}) {
 					></iframe>
 				) : (
 					<h2
-						style={{ fontWeight: 'bolder', fontSize: '30px', color: 'white' }}
+						style={{ fontWeight: 'bolder', color: 'white' }}
+						className="text-2xl md:8xl"
 					>
 						No Videos Available
 					</h2>
