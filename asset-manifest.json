@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/movies_adda/static/css/main.2ac4233e.css",
-    "main.js": "/movies_adda/static/js/main.d2dd7b50.js",
+    "main.js": "/movies_adda/static/js/main.a4bd5343.js",
     "static/js/453.f0cb673c.chunk.js": "/movies_adda/static/js/453.f0cb673c.chunk.js",
     "static/media/logo.png": "/movies_adda/static/media/logo.a4a2571752cddf6545eb.png",
     "static/media/loader.png": "/movies_adda/static/media/loader.2aaf2331a3e63321747f.png",
     "index.html": "/movies_adda/index.html",
     "main.2ac4233e.css.map": "/movies_adda/static/css/main.2ac4233e.css.map",
-    "main.d2dd7b50.js.map": "/movies_adda/static/js/main.d2dd7b50.js.map",
+    "main.a4bd5343.js.map": "/movies_adda/static/js/main.a4bd5343.js.map",
     "453.f0cb673c.chunk.js.map": "/movies_adda/static/js/453.f0cb673c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ac4233e.css",
-    "static/js/main.d2dd7b50.js"
+    "static/js/main.a4bd5343.js"
   ]
 }
