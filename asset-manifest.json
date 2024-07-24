@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/movies_adda/static/css/main.0bfe9bcc.css",
-    "main.js": "/movies_adda/static/js/main.6dc20ad3.js",
+    "main.css": "/movies_adda/static/css/main.e3f46408.css",
+    "main.js": "/movies_adda/static/js/main.e723dd54.js",
     "static/js/453.f0cb673c.chunk.js": "/movies_adda/static/js/453.f0cb673c.chunk.js",
     "static/media/logo.png": "/movies_adda/static/media/logo.a4a2571752cddf6545eb.png",
     "static/media/loader.png": "/movies_adda/static/media/loader.2aaf2331a3e63321747f.png",
     "index.html": "/movies_adda/index.html",
-    "main.0bfe9bcc.css.map": "/movies_adda/static/css/main.0bfe9bcc.css.map",
-    "main.6dc20ad3.js.map": "/movies_adda/static/js/main.6dc20ad3.js.map",
+    "main.e3f46408.css.map": "/movies_adda/static/css/main.e3f46408.css.map",
+    "main.e723dd54.js.map": "/movies_adda/static/js/main.e723dd54.js.map",
     "453.f0cb673c.chunk.js.map": "/movies_adda/static/js/453.f0cb673c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bfe9bcc.css",
-    "static/js/main.6dc20ad3.js"
+    "static/css/main.e3f46408.css",
+    "static/js/main.e723dd54.js"
   ]
 }
