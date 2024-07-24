@@ -12,7 +12,7 @@ function MovieDetail() {
 	const { pathname } = useLocation();
 	const { id, language } = useParams();
 	const [player,setPlayer]=useState(false);
-	const { kannadaMovies, hindiMovies, telaguMovies } = useSelector(
+	const { kannadaMovies, hindiMovies, telaguMovies,tamilMovies } = useSelector(
 		(state) => state.MovieSlice
 	);
 	let relatedMovies = [];
@@ -39,6 +39,8 @@ function MovieDetail() {
 			return kannadaMovies;
 		} else if (language == 'hi') {
 			return hindiMovies;
+		} else if (language == 'ta') {
+			return tamilMovies;
 		} else {
 			return [];
 		}
@@ -94,7 +96,7 @@ function MovieDetail() {
 							</p>
 							<div className="overvie_section py-4 text-lg">
 								<h3 className="text-white font-bold py-2">OVERVIEW</h3>
-								<p className="text-white text-[14px] md:text-1xl " style={{ width: '100%' }}>
+								<p className="text-white text-[14px] md:text-xl " style={{ width: '100%' }}>
 									{detail.overview}
 								</p>
 								<div className="specification_container py-4">

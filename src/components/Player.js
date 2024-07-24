@@ -19,9 +19,10 @@ function Player({videos,setPlayer}) {
 			className="p-5 md:p-15 "
 		>
 			<div
-				className="px-6 player_container h-1/2 sm:h-1/2 md:h-2/3 lg:h-1/1"
+				className="px-6 player_container"
 				style={{
 					width: 'auto',
+					height:'100%',
 					backgroundColor: 'black',
 					overflow: 'scroll',
 					display: 'flex',

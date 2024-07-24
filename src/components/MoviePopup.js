@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { ImgBaseUrl } from '../API/Client';
 import no_image from '../assets/no_image.svg.png';
 import { searchMovie } from '../API/ApiHandler';
+import { useNavigate } from 'react-router-dom';
 
 function MoviePopup({ setEnableSearch }) {
 	const { hindiMovies } = useSelector((state) => state.MovieSlice);
@@ -12,6 +13,7 @@ function MoviePopup({ setEnableSearch }) {
 	const [isLoading, setIsLoading] = useState(false);
 	const elementRef = useRef();
 	const stringRef = useRef();
+	const navigate=useNavigate()
 	stringRef.current = searchKey;
 	useEffect(() => {
 		getMovies();
@@ -71,14 +73,14 @@ function MoviePopup({ setEnableSearch }) {
 				onScroll={handleScroll}
 			>
 				<div className="relative mt-2 rounded-md shadow-sm flex justify-end mb-4 " style={{position:'sticky',top:'10px'}}>
-					<div
+					{/* <div
 						className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
 						style={{ cursor: 'pointer' }}
 					>
 						<span className="text-black sm:text-sm">
 							<i className="fas fa-search fa-lg"></i>
 						</span>
-					</div>
+					</div> */}
 					<input
 						type="text"
 						name="price"
@@ -102,7 +104,13 @@ function MoviePopup({ setEnableSearch }) {
 					<div className="grid lg:grid-cols-8 md:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-4 mb-1">
 						{results.map((item) => {
 							return (
-								<div style={{ width: '100%' }}>
+								<div
+									style={{ width: '100%',cursor:'pointer' }}
+									onClick={() => {
+										navigate(`/details/${item.id}/${item.original_language}`);
+										setEnableSearch(false);
+									}}
+								>
 									<img
 										src={
 											item.poster_path
