@@ -26,7 +26,7 @@ function Header() {
 				className="mx-auto flex  items-center p-2 lg:px-4"
 				aria-label="Global"
 			>
-				<div className="justify-between px-2">
+				<div className="justify-between px-2 items-center" style={{}}>
 					<div
 						className="flex lg:flex-1 cursor-pointer"
 						onClick={() => navigate('/')}
@@ -42,7 +42,7 @@ function Header() {
 					</div>
 				</div>
 				<div
-					className="flex lg:hidden "
+					className="flex lg:hidden  items-center justify-between"
 					style={mobileView ? { display: 'none' } : {}}
 				>
 					<button
@@ -66,6 +66,15 @@ function Header() {
 							/>
 						</svg>
 					</button>
+					{showProfile ? (
+						<Profile setShowProfile={setShowProfile} />
+					) : (
+						<i
+							onClick={() => setShowProfile(true)}
+							className="fas fa-user fa-lg ml-4 "
+							style={{ color: 'white', cursor: 'pointer' }}
+						></i>
+					)}
 				</div>
 
 				<div className="hidden lg:flex lg:gap-x-8">
@@ -132,7 +141,10 @@ function Header() {
 			>
 				<div className="fixed inset-0 z-10"></div>
 				<div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-					<div className="flex items-center justify-between">
+					<div
+						className="flex items-center justify-between"
+						style={{ width: '100%' }}
+					>
 						<a href="#" className="-m-1.5 p-1.5">
 							<span className="sr-only">Your Company</span>
 							<img className="h-12 w-auto" src={logo} alt="" />
@@ -142,7 +154,6 @@ function Header() {
 							className="-m-2.5 rounded-md p-2.5 text-white"
 							onClick={() => setMobileView(!mobileView)}
 						>
-							<span className="sr-only text-white">Close menu</span>
 							<svg
 								className="h-6 w-6"
 								fill="none"

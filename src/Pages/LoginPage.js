@@ -68,6 +68,7 @@ dispatch(setLoginUser(response.data.user));
 				width: '100vw',
 				background: `linear-gradient(to bottom,rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY.jpg) no-repeat`,
 				backgroundSize: 'cover',
+				padding:'10px'
 			}}
 		>
 			{login ? (
@@ -102,9 +103,9 @@ dispatch(setLoginUser(response.data.user));
 						/>
 						<span onClick={() => setSecure(!secure)}>
 							{secure ? (
-								<i className="fas fa-eye-slash  text-white mr-3 text-xl cursor-pointer"></i>
+								<i className="fas fa-eye-slash  text-white pr-3 text-xl cursor-pointer"></i>
 							) : (
-								<i className="fas fa-eye  text-white mr-3 text-xl cursor-pointer"></i>
+								<i className="fas fa-eye  text-white pr-3 text-xl cursor-pointer "></i>
 							)}
 						</span>
 						{error == 2 && <Warning text="please enter password" />}
