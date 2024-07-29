@@ -12,7 +12,7 @@ function Player({videos,setPlayer}) {
 				width: '100vw',
 				height: '100vh',
 				backgroundColor: 'rgba(0,0,0,0.6)',
-				zIndex: 20,
+				zIndex: 25,
 				top: '0px',
 				bottom: '0px',
 			}}

@@ -14,6 +14,7 @@ const MovieSlice = createSlice({
 		kannadaMovies: [],
 		tamilMovies: [],
 		currentMovie: '',
+		loginUser: {},
 	},
 	reducers: {
 		setHomeItem: (state, action) => {
@@ -21,6 +22,9 @@ const MovieSlice = createSlice({
 		},
 		setCategory: (state, action) => {
 			state.category = action.payload;
+		},
+		setLoginUser: (state, action) => {
+			state.loginUser = action.payload;
 		},
 	},
 	extraReducers: (builder) => {
@@ -50,5 +54,5 @@ const MovieSlice = createSlice({
 		});
 	},
 });
-export const { setHomeItem } = MovieSlice.actions;
+export const { setHomeItem, setLoginUser } = MovieSlice.actions;
 export default MovieSlice.reducer;

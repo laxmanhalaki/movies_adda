@@ -66,3 +66,33 @@ width: 0px;
     height: 50%;
   }
 }
+.custom::placeholder{
+  color:white;
+  font-weight: 400;
+  
+}
+input[type=text],input[type=password] {
+  width: 100%;
+  padding: 0px 20px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+  border: none;
+}
+.input_out{
+  border:1px solid white;
+  margin:22px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.input_out:hover{
+    border:1px solid orangered;
+}

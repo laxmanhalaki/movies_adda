@@ -6,7 +6,7 @@ import no_image_small from '../assets/no_image_small.svg.png';
 import SliderCard from './SliderCard';
 
 
-function PopularSlider(props) {
+function PopularSlider({data=[],title}) {
 	const navigate = useNavigate();
 	const sliderref = useRef();
 	const scrollLeft = () => {
@@ -16,7 +16,7 @@ function PopularSlider(props) {
 		sliderref.current.scrollLeft += 300;
 	};
 	const gotoExplore = () => {
-		navigate('/explore/' + props.data[0].original_language);
+		navigate('/explore/' + data[0].original_language);
 	};
 	return (
 		<div
@@ -25,7 +25,7 @@ function PopularSlider(props) {
 		>
 			<div className="flex justify-between">
 				<h3 className="text-white text-lg my-2">
-					{props.title ? props.title : 'Popular on NetFlix'}
+					{title ? title : 'Popular on NetFlix'}
 				</h3>
 				<p
 					style={{ cursor: 'pointer', fontWeight: 'bolder' }}
@@ -59,7 +59,7 @@ function PopularSlider(props) {
 					style={{ overflowX: 'scroll', scrollBehavior: 'smooth' }}
 					ref={sliderref}
 				>
-					{props.data.map((item) => {
+					{data.map((item) => {
 						return <SliderCard item={item} />;
 					})}
 					<div

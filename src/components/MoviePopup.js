@@ -72,7 +72,7 @@ function MoviePopup({ setEnableSearch }) {
 				ref={elementRef}
 				onScroll={handleScroll}
 			>
-				<div className="relative mt-2 rounded-md shadow-sm flex justify-end mb-4 " style={{position:'sticky',top:'10px'}}>
+				<div className="relative mt-2 rounded-md shadow-sm flex justify-end mb-4 " style={{position:'sticky',top:'10px',height:'35px',width:'250px'}}>
 					{/* <div
 						className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
 						style={{ cursor: 'pointer' }}
@@ -85,7 +85,7 @@ function MoviePopup({ setEnableSearch }) {
 						type="text"
 						name="price"
 						id="price"
-						className="border-none pl-4 pr-10 py-1"
+						className="border-none pl-4 pr-10 py-2"
 						placeholder="Search Here"
 						value={searchKey}
 						onChange={(e) => setSearchKey(e.target.value)}

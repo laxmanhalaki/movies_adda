@@ -3,12 +3,14 @@ import logo from '../assets/logo.png';
 import categoryContext from '../utils/categoryContext';
 import { useNavigate } from 'react-router-dom';
 import MoviePopup from './MoviePopup';
+import Profile from './Profile';
 
 
 function Header() {
   const [mobileView,setMobileView]=useState(false);
   const {setCategory}=useContext(categoryContext);
   const [enableSearch,setEnableSearch]=useState(false);
+	const [showProfile,setShowProfile]=useState(false);
   const navigate=useNavigate();
 
   const changeCategory=(cat)=>{
@@ -17,7 +19,7 @@ function Header() {
   return (
 		<header
 			className="bg-black"
-			style={{ position: 'fixed', zIndex: 10, width: '100%', top: '0px' }}
+			style={{ position: 'fixed', zIndex: 22, width: '100%', top: '0px' }}
 		>
 			{enableSearch && <MoviePopup setEnableSearch={setEnableSearch} />}
 			<nav
@@ -68,7 +70,6 @@ function Header() {
 
 				<div className="hidden lg:flex lg:gap-x-8">
 					<a
-						href="#"
 						className="text-sm leading-6 text-white font-bold hover:text-purple cursor-pointer"
 						onClick={() => {
 							navigate('/explore/hi');
@@ -77,7 +78,6 @@ function Header() {
 						Hindi
 					</a>
 					<a
-						href="#"
 						className="text-sm leading-6 text-white font-bold hover:text-purple cursor-pointer"
 						onClick={() => {
 							navigate('/explore/kn');
@@ -86,7 +86,6 @@ function Header() {
 						Kannada
 					</a>
 					<a
-						href="#"
 						className="text-sm leading-6 text-white font-bold hover:text-purple cursor-pointer"
 						onClick={() => {
 							navigate('/explore/te');
@@ -95,7 +94,6 @@ function Header() {
 						Telagu
 					</a>
 					<a
-						href="#"
 						className="text-sm leading-6 text-white font-bold hover:text-purple cursor-pointer"
 						onClick={() => {
 							navigate('/explore/ta');
@@ -106,10 +104,19 @@ function Header() {
 				</div>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 					<div className="flex item-center">
+						{showProfile ? (
+							<Profile setShowProfile={setShowProfile} />
+						) : (
+							<i
+								onClick={() => setShowProfile(true)}
+								className="fas fa-user fa-lg "
+								style={{ color: 'white', cursor: 'pointer' }}
+							></i>
+						)}
 						{!enableSearch && (
 							<i
 								onClick={() => setEnableSearch(!enableSearch)}
-								className="fas fa-search fa-lg"
+								className="fas fa-search fa-lg mx-6"
 								style={{ color: 'white', cursor: 'pointer' }}
 							></i>
 						)}
@@ -215,6 +222,7 @@ function Header() {
 					</ul>
 				</div>
 			</div>
+			{/* <Profile /> */}
 		</header>
 	);
 }

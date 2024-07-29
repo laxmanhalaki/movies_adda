@@ -15,10 +15,11 @@ function Home(props) {
 		width: '100vw',
 		height: '100%',
 		// position: 'absolute',
-		backgroundImage:`url(${ImgBaseUrlqty + currentMovie.backdrop_path})`,
-		// background: 'linear-gradient(to left top,transparent,black 80%)',
-		aligncurrentMovies: 'center',
-		display: 'flex',
+		background: `linear-gradient(to bottom,rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(${
+			ImgBaseUrlqty + currentMovie.backdrop_path
+		}) no-repeat`,
+		backgroundSize: 'cover',
+		// display: 'flex',
 	};
 	return (
 		<>
@@ -30,7 +31,7 @@ function Home(props) {
 					>
 						<div
 							className="banner_container"
-							style={{ ...divStyle, justifyContent: 'flex-start' }}
+							style={{ ...divStyle}}
 						>
 							<div
 								className="mt-4 px-8 max-w-2xl py-6 sm:py-20 lg:py-30 lg:mt-10  md:mt-6 "
