@@ -1,24 +1,29 @@
 import api from './Client';
 
-const getMovies = (page, language) => {
+const MyHeader = {
+	headers: {
+		Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
+	},
+};
+
+const getMovies = (page=1, language='hi') => {
 	return api.get(
-		`/movies/${page}/${language}`,{},
-		{headers:{'Authorization':localStorage.getItem('token')}}
+		`/discover/movie?&page=${page}&with_origin_country=IN&with_original_language=${language}`,{},MyHeader
 	);
 };
 
-const getMovie = (id, language) => {
+const getMovie = (id, language='hi') => {
 	return api.get(
-		`/movie/${id}/${language}`,
+		`/movie/${id}?append_to_response=videos&with_origin_country=IN&with_original_language=${language}`,
 		{},
-		{ headers: { Authorization: localStorage.getItem('token') } }
+		MyHeader
 	);
 };
 const searchMovie = (query,page=1) => {
 	return api.get(
-		`/search/${query}/${page}`,
+		`/search/movie?query=${query}&include_adult=false&language=en-US&page=${page}`,
 		{},
-		{ headers: { Authorization: localStorage.getItem('token') } }
+		MyHeader
 	);
 };
 const userLogin = (data) => {

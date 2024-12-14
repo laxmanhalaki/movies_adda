@@ -19,7 +19,7 @@ function App() {
   const dispatch=useDispatch();
  
   const [category,setCategory]=useState('movie');
-	const [validUser,setValidUser]=useState(false);
+	const [validUser,setValidUser]=useState(true);
 
 useEffect(() => {
 	dispatch(getHindiMovies(category));

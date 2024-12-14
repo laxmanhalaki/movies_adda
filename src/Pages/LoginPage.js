@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react'
-import img from '../assets/login_bg.jpg'
 import { userLogin, userSignUP } from '../API/ApiHandler';
-import { useNavigate } from 'react-router-dom';
 import categoryContext from '../utils/categoryContext';
 import { useDispatch } from 'react-redux';
 import { setLoginUser } from '../Redux/MovieSlice';
